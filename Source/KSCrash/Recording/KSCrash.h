@@ -39,12 +39,12 @@ typedef enum
     KSCrashDemangleLanguageAll = ~1
 } KSCrashDemangleLanguage;
 
-typedef enum
+typedef NS_ENUM(NSInteger , KSCDeleteBehavior)
 {
-    KSCDeleteNever,
+    KSCDeleteNever = 0,
     KSCDeleteOnSucess,
     KSCDeleteAlways
-} KSCDeleteBehavior;
+};
 
 /**
  * Reports any crashes that occur in the application.
