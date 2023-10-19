@@ -79,8 +79,7 @@
  * If you DO care about line numbers, have the dsym file handy, and will be
  * symbolicating offline, use KSAppleReportStyleSymbolicatedSideBySide.
  */
-typedef enum
-{
+typedef NS_ENUM(NSInteger, KSAppleReportStyle) {
     /** Leave all stack trace entries unsymbolicated. */
     KSAppleReportStyleUnsymbolicated,
 
@@ -96,7 +95,25 @@ typedef enum
 
     /** Symbolicate everything. */
     KSAppleReportStyleSymbolicated,
-} KSAppleReportStyle;
+};
+//typedef enum
+//{
+//    /** Leave all stack trace entries unsymbolicated. */
+//    KSAppleReportStyleUnsymbolicated,
+//
+//    /** Symbolicate all stack trace entries except for those in the main
+//     * executable.
+//     */
+//    KSAppleReportStylePartiallySymbolicated,
+//
+//    /** Symbolicate all stack trace entries, but for any in the main executable,
+//     * put both an unsymbolicated and a symbolicated entry side-by-side.
+//     */
+//    KSAppleReportStyleSymbolicatedSideBySide,
+//
+//    /** Symbolicate everything. */
+//    KSAppleReportStyleSymbolicated,
+//} KSAppleReportStyle;
 
 
 /** Converts to Apple format.
